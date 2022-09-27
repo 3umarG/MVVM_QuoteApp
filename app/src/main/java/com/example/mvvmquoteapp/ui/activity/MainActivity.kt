@@ -9,7 +9,7 @@ import com.example.mvvmquoteapp.databinding.ActivityMainBinding
 import com.example.mvvmquoteapp.ui.viewmodel.QuoteViewModel
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding : ActivityMainBinding
     private lateinit var quoteViewModel: QuoteViewModel
 
     @SuppressLint("SetTextI18n")
@@ -20,9 +20,11 @@ class MainActivity : AppCompatActivity() {
 
         val etTitle = binding.etTitle
         val etAuthor = binding.etAuthor
-        val tvQuote = binding.tvQuote
 
         quoteViewModel = ViewModelProvider(this)[QuoteViewModel::class.java]
+
+        binding.quoteModelView = this.quoteViewModel
+        binding.lifecycleOwner = this
 
         binding.button.setOnClickListener {
             if (etTitle.text.isBlank() || etAuthor.text.isBlank()) {
@@ -35,8 +37,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        quoteViewModel.data.observe(this) {
-            tvQuote.text = "${it.title.trim()} : ${it.author.trim()}"
-        }
     }
 }
