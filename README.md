@@ -40,8 +40,8 @@ It also has alot of actions you can use , like you can assign any value to the w
 
 
 ## What is Binding Adapter ??
-Binding adapters are responsible for making the appropriate framework calls to set values.
-The Data Binding Library allows you to specify the method called to set a value, provide your own binding logic, and specify the type of the returned object by using adapters.
-The power of Binding Adapter is shown when you want to do a lot of work depend on the value that you receive like -live data- or -Model- ...
-You can specify alot of actions on separate place and file to make your code maintainable , easy to track and easy to understand from others . 
+   - Binding adapters are responsible for making the appropriate framework calls to set values.
+   - The Data Binding Library allows you to specify the method called to set a value, provide your own binding logic, and specify the type of the returned object by    using adapters.
+   - The power of Binding Adapter is shown when you want to do a lot of work depend on the value that you receive like -live data- or -Model- ...
+   - You can specify alot of actions on separate place and file to make your code maintainable , easy to track and easy to understand from others . 
    
